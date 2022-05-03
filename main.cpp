@@ -1,5 +1,5 @@
 #include "BubbleSort.h"
-#include "QuickSort.h"
+//#include "QuickSort.h"
 #include <iostream>
 #include <vector>
 
@@ -8,14 +8,14 @@ int main() {
 
     BubbleSort bs;
     std::cout << "Unsorted list (BubbleSort): ";
-    for (int i = 0; i < list.size(); i++) {
+    for (long unsigned int i = 0; i < list.size(); i++) {
         std::cout << list[i] << " ";
     }
 
     std::vector<int> sortedList = bs.sort(list);
 
     std::cout << "\nSorted list (BubbleSort): ";
-    for (int i = 0; i < sortedList.size(); i++) {
+    for (long unsigned int i = 0; i < sortedList.size(); i++) {
         std::cout << sortedList[i] << " ";
     }
 
