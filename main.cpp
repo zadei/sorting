@@ -17,10 +17,13 @@ int main() {
     std::cout << "\nSorted list (BubbleSort): ";
     for (int i = 0; i < sortedList.size(); i++) {
         std::cout << sortedList[i] << " ";
-        if (i == sortedList.size() - 1) {
-            std::cout << "\n";
-        }
     }
 
     QuickSort qs;
+    std::cout << "\nSorted list (QuickSort): ";
+    std::vector<int> QuickSortedList = qs.sort(list);
+
+    for (int i = 0; i < QuickSortedList.size(); i++) {
+        std::cout << QuickSortedList[i] << " ";
+    }
 }
