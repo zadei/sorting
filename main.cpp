@@ -19,11 +19,11 @@ int main() {
         std::cout << sortedList[i] << " ";
     }
 
-    QuickSort qs;
+    /* QuickSort qs;
     std::cout << "\nSorted list (QuickSort): ";
     std::vector<int> QuickSortedList = qs.sort(list);
 
     for (int i = 0; i < QuickSortedList.size(); i++) {
         std::cout << QuickSortedList[i] << " ";
-    }
+    } */
 }
