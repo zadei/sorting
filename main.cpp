@@ -1,5 +1,6 @@
 #include "BubbleSort.h"
 #include "QuickSort.h"
+#include "RecursiveBinarySearch.h"
 #include <iostream>
 #include <vector>
 
@@ -26,4 +27,9 @@ int main() {
     for (int i = 0; i < QuickSortedList.size(); i++) {
         std::cout << QuickSortedList[i] << " ";
     }
+
+    // We will use the qs sorted list to test the recursive binary search
+    std::cout << "\n\nRecursive Binary Search" << std::endl;
+    RecursiveBinarySearch rbs;
+    std::cout << "Number found at index: " << rbs.search(QuickSortedList, 8) << std::endl;
 }
