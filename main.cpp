@@ -6,14 +6,16 @@
 
 int main() {
     std::vector<int> list;
+    BubbleSort bs;
+    QuickSort qs;
+    RecursiveBinarySearch rbs;
+
     while(!std::cin.fail()) {
         int input;
         std::cin >> input;
         list.push_back(input);
     }
-    
-    BubbleSort bs;
-    QuickSort qs;
-    RecursiveBinarySearch rbs;
+
+    std::cout << "Bubble Sort: " << std::endl;
 
 }
