@@ -24,5 +24,5 @@ bool RecursiveBinarySearch::search(std::vector<int> list, int target) {
             index++;
         }
     }
-    return true;
+    return valueFound;
 }

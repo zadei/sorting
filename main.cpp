@@ -8,7 +8,8 @@ int main() {
     std::vector<int> list;
     BubbleSort bs;
     QuickSort qs;
-    RecursiveBinarySearch rbs;
+    //RecursiveBinarySearch rbs;
+    std::string boolOne = "false";
 
     while(!std::cin.fail()) {
         int input;
@@ -17,8 +18,16 @@ int main() {
     }
     list.pop_back();
 
-    for (int i = 0; i < list.size(); i++) {
-        std::cout << list[i] << std::endl;
+    qs.sort(list);
+
+    for (long unsigned int i = 0; i < list.size(); i++) {
+        if (list.at(i) == 1) {
+            boolOne =  "true";
+        }
     }
 
+    std::cout << boolOne << " ";
+    for (long unsigned int i = 0; i < list.size(); i++) {
+        std::cout << list.at(i) << " ";
+    }
 }

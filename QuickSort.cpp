@@ -12,7 +12,7 @@ std::vector<int> QuickSort::sort(std::vector<int> list)
         std::vector<int> less;
         std::vector<int> greater;
 
-        for (int i = 1; i < list.size(); i++)
+        for (long unsigned int i = 1; i < list.size(); i++)
         {
             if (list[i] <= pivot)
             {
