@@ -2,57 +2,36 @@
 #include <iostream>
 #include <vector>
 
-std::vector<int> QuickSort::sort(std::vector<int> list) {
-    std::vector<int> sortedList = list; 
+std::vector<int> QuickSort::sort(std::vector<int> list)
+{
+    std::vector<int> sortedList = list;
 
-    if (sortedList.size() > 3) {
-    int pivot = sortedList[2];
-    }
-    if (sortedList.size() <= 2) {
-        if (sortedList[0] > sortedList[1]) {
-            int temp = sortedList[0];
-            sortedList[0] = sortedList[1];
-            sortedList[1] = temp;
-        }
-        return sortedList;
-    }
-    if (sortedList.size() == 3) {
-        if (sortedList[0] > sortedList[1]) {
-            int temp = sortedList[0];
-            sortedList[0] = sortedList[1];
-            sortedList[1] = temp;
-        }
-        if (sortedList[1] > sortedList[2]) {
-            int temp = sortedList[1];
-            sortedList[1] = sortedList[2];
-            sortedList[2] = temp;
-        }
-        if (sortedList[0] > sortedList[1]) {
-            int temp = sortedList[0];
-            sortedList[0] = sortedList[1];
-            sortedList[1] = temp;
-        }
-        return sortedList;
-    }
+    if (list.size() > 1)
+    {
+        int pivot = list[0];
+        std::vector<int> less;
+        std::vector<int> greater;
 
-    int pivot = sortedList[2];
-    int left = 0;
-    int right = sortedList.size() - 1;
-
-        while (left < right) {
-        while (sortedList[left] < pivot) {
-            left++;
-        }
-        while (sortedList[right] > pivot) {
-            right--;
-        }
-        if (left < right) {
-            int temp = sortedList[left];
-            sortedList[left] = sortedList[right];
-            sortedList[right] = temp;
+        for (int i = 1; i < list.size(); i++)
+        {
+            if (list[i] <= pivot)
+            {
+                less.push_back(list[i]);
+            }
+            else
+            {
+                greater.push_back(list[i]);
             }
         }
-        
 
-return sortedList;
+        std::vector<int> sortedLess = sort(less);
+        std::vector<int> sortedGreater = sort(greater);
+
+        sortedList.clear();
+        sortedList.insert(sortedList.end(), sortedLess.begin(), sortedLess.end());
+        sortedList.push_back(pivot);
+        sortedList.insert(sortedList.end(), sortedGreater.begin(), sortedGreater.end());
+    }
+
+    return sortedList;
 }
