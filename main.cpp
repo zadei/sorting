@@ -16,6 +16,8 @@ int main() {
         list.push_back(input);
     }
 
-    std::cout << "Bubble Sort: " << std::endl;
+    for (int i=0; i<list.size(); i++) {
+        std::cout << list[i] << std::endl;
+    }
 
 }
