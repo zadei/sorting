@@ -18,7 +18,7 @@ int main() {
     }
     list.pop_back();
 
-    qs.sort(list);
+    bs.sort(list);
 
     for (long unsigned int i = 0; i < list.size(); i++) {
         if (list.at(i) == 1) {
@@ -30,4 +30,7 @@ int main() {
     for (long unsigned int i = 0; i < list.size(); i++) {
         std::cout << list.at(i) << " ";
     }
+
+
+
 }
