@@ -17,4 +17,8 @@ int main() {
     }
     list.pop_back();
 
+    for (int i = 0; i < list.size(); i++) {
+        std::cout << list[i] << std::endl;
+    }
+
 }
