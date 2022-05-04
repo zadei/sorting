@@ -34,7 +34,7 @@ std::vector<int> QuickSort::sort(std::vector<int> list) {
         }
         return sortedList;
     }
-    
+
     int pivot = sortedList[2];
     int left = 0;
     int right = sortedList.size() - 1;
